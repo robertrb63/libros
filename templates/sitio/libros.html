@@ -1,0 +1,28 @@
+{% include 'sitio/header.html' %}
+
+    <div class="row align-items-md-stretch">
+        <div class="col-md-6">
+        </div>
+            <div
+                class="h-100 p-5 text-white bg-primary border rounded-3">
+                <h2>Seccion Libros</h2>
+                <button class="btn btn-outline-primary" type="button">Example button</button>
+            </div>
+
+    </div>
+        <div class="row">
+            {%for libro in libros%}
+            <div class="col-md-3">
+                <div class="card">
+                    <img class="card-img-top" src="/img/{{ libro[2] }}" alt="Title">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ libro[1]}}</h4>
+                        <p class="card-text">TEXTO</p>
+                        <a name="" id="" class="btn btn-success" href="{{ libro[3] }}" role="button">Descargar</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}      
+        </div>
+
+{% include 'sitio/footer.html' %}
